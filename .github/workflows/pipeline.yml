@@ -19,5 +19,5 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - run: gradle build
       - name: Check with Sonarqube
-        run: gradle ./gradlew sonarqube --info -Dsonar.projectKey=uk223 -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: gradle sonarqube --info -Dsonar.projectKey=uk223 -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
