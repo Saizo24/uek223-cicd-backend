@@ -8,4 +8,5 @@ jobs:
         shell: bash
         env:
           secret: ${{ secrets.SECRET_IDENTITY }}
-        
+        run: |
+          echo "$secret"
