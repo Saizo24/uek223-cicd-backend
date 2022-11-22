@@ -7,4 +7,5 @@ jobs:
       - name: Run echo $SECRET_IDENTITY
         with:
           secret: ${{secrets.SECRET_IDENTITY}}
-        run: echo secret
+        run: | 
+          echo secret
