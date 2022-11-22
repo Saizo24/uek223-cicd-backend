@@ -6,4 +6,4 @@ jobs:
     steps:
       - run: echo $SECRET_IDENTITY
         env:
-          $SECRE_IDENTITY: ${{secrets.SECRET_IDENTITY}}
+          $SECRET_IDENTITY: ${{secrets.SECRET_IDENTITY}}
