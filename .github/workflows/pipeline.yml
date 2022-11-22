@@ -11,4 +11,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          script: echo “Hello World1”
+          script: run.sh
