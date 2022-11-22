@@ -1,4 +1,4 @@
-name: Dynamic Test 1
+name: Dynamic Test
 
 on: [push]
 
