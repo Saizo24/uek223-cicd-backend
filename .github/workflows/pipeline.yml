@@ -4,4 +4,7 @@ jobs:
   print-my-secret:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{secrets.SECRET_IDENTITY}}
+      - name: Run echo $SECRET_IDENTITY
+        with:
+          secret: ${{secrets.SECRET_IDENTITY}}
+        run: echo secret
