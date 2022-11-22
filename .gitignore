@@ -24,5 +24,4 @@ hs_err_pid*
 .idea/
 build/
 .gradle/
-gradlew.bat
 .env.local
