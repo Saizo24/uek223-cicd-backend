@@ -1,16 +1,10 @@
 name: Dynamic Test
 
-
-
-on: [ push ]
-
-
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-
 
     steps:
       - uses: actions/checkout@v3
@@ -26,3 +20,5 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
       - run: ./gradlew build
+      - name: Check with Sonarqube
+        run: ./gradlew sonarqube --info -Dsonar.projectKey=uk223 -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.login=${{ secrets.SONAR_TOKEN }}
